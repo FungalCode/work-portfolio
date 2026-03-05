@@ -1,0 +1,64 @@
+.card-container {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 2rem 1.5rem;
+  background-color: var(--background-card-color);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: min(500px, 80vw);
+  height: 100%;
+  justify-content: space-between;
+}
+
+.quote-content {
+  margin: 0;
+  color: var(--text-color);
+  position: relative;
+  font-style: normal;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  border-radius: 100px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background-color: var(--light-primary-color);
+}
+
+.meta-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.name {
+  font-style: normal;
+  display: block;
+  color: var(--light-text-color);
+  font-size: clamp(.875rem, 1.25vw, 1rem);
+}
+
+.title {
+  margin: 0;
+  color: var(--text-color);
+  hyphens: auto;
+  overflow-wrap: break-word;
+  font-size: clamp(.875rem, 1.25vw, 1rem);
+  font-weight: 500;
+}
+
+.card-container:focus-within {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+}

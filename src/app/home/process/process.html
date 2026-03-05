@@ -1,0 +1,9 @@
+<section>
+    <h2 class="h2">Mehr qualifizierte Patienten für Deine Praxis.<span class="montserrat-h2"> Mein Prozess.</span></h2>
+    @for (step of steps(); track step.title) {
+        <div class="step">
+            <h3 class="h3">{{ step.title }}</h3>
+            <p class="p">{{ step.description }}</p>
+        </div>
+    }
+</section>

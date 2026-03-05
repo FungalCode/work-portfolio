@@ -1,0 +1,32 @@
+<section #aboutSection class="container about-grid" id="about">
+  <div class="text-content">
+    <h2 class="h2 title">Über Mich</h2>
+    <div class="description-wrapper">
+        @for (p of paragraphs(); track p) {
+            <p class="p paragraph-spacing" [innerHTML]="p"></p>
+        }
+    </div>
+        <div class="actions">
+          <app-button></app-button>
+      </div>
+  </div>
+
+  <div class="image-stack-container">
+    <div class="stack">
+      @for (img of images(); track img; let i = $index) {
+        <div class="card" [style.--index]="i" (click)="manualShuffle()">
+          <img [ngSrc]="img" fill alt="Samuel Lackner" priority />
+        </div>
+      }
+    <button class="control-btn" (click)="togglePlay()" [attr.aria-label]="isPlaying() ? 'Halt' : 'Play'">
+      @if (isPlaying()) {
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+      } @else {
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      }
+    </button>
+    </div>
+
+
+  </div>
+</section>

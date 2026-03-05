@@ -1,0 +1,47 @@
+<div class="card-container">
+  <header class="card-header">
+    <h3 class="package-title" [innerHTML]="title()"></h3>
+    <p class="price-display">
+      <span class="h3-montserrat">Ab </span>
+      <span class="p price-value">{{ price() }}</span>
+    </p>
+  </header>
+
+  <div class="features-wrapper">
+    @if (highlightedFeatures().length > 0) {
+      <ul class="feature-list highlighted" aria-label="Premium Features">
+        @for (feature of highlightedFeatures(); track feature) {
+          <li class="p feature-item">
+            <app-checkmark></app-checkmark>
+            {{ feature }}
+          </li>
+        }
+      </ul>
+    }
+
+    @if (standardFeatures().length > 0) {
+      <ul class="feature-list standard" aria-label="Standard Features">
+        @for (feature of standardFeatures(); track feature) {
+          <li class="p feature-item">
+            <app-checkmark></app-checkmark>
+            {{ feature }}
+          </li>
+        }
+      </ul>
+    }
+  </div>
+</div>
+
+<ng-template #checkmark>
+  <svg 
+    class="check-icon" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2.5" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    aria-hidden="true">
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+</ng-template>

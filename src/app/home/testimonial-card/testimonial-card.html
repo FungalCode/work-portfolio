@@ -1,0 +1,22 @@
+<figure class="card-container">
+  <blockquote class="p quote-content">
+    {{ quote() }}
+  </blockquote>
+
+  <figcaption class="author-info">
+    <div class="avatar-wrapper">
+      <img 
+        [ngSrc]="authorImage()" 
+        [alt]="'Portrait of ' + authorName()" 
+        width="80" 
+        height="80"
+        class="author-avatar"
+      />
+    </div>
+    
+    <div class="meta-data">
+      <cite class="name">{{ authorName() }}</cite>
+      <p class="title">{{ authorTitle() }}</p>
+    </div>
+  </figcaption>
+</figure>

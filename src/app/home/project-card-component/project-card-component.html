@@ -1,0 +1,28 @@
+<article class="card">
+      <div class="card-content">
+        <div class="text-group">
+          <h3 class="h3">{{ project().title }}</h3>
+          <p class="p" [innerHTML]="project().description"></p>
+
+          <div class="actions">
+            <a [href]="project().websiteUrl" target="_blank" class="btn-secondary p">
+              Zur Webseite
+            </a>
+          </div>
+        </div>
+
+        <div class="image-gallery">
+          <div class="image-container">
+            @for (img of [activeImage()]; track imageIndex()) {
+              <img 
+                [ngSrc]="img" 
+                fill
+                priority
+                alt="Project Preview" 
+                class="project-image animate-fade"
+              />
+            }
+          </div>
+        </div>
+      </div>
+</article>

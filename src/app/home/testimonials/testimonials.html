@@ -1,0 +1,16 @@
+<section class="testimonials-section" aria-labelledby="testimonials-title">
+  <div class="container">
+    <h2 id="testimonials-title" class="h2 section-header">Das sagen meine Kunden.</h2>
+    
+    <div class="testimonials-slider">
+      @for (item of testimonials(); track item.name) {
+        <app-testimonial-card
+          [quote]="item.quote"
+          [authorName]="item.name"
+          [authorTitle]="item.title"
+          [authorImage]="item.image"
+        />
+      }
+    </div>
+  </div>
+</section>
