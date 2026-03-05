@@ -1,0 +1,18 @@
+<section class="pricing-section" aria-labelledby="pricing-title">
+  <header class="section-header">
+    <h2 id="pricing-title" class="h2">Kosten. Exklusive Ust.</h2>
+  </header>
+  <div class="pricing-grid">
+    @for (plan of plans(); track plan.title) {
+      <app-pricing-card
+        [title]="plan.title"
+        [price]="plan.price"
+        [highlightedFeatures]="plan.highlighted"
+        [standardFeatures]="plan.standard"
+      />
+    }
+  </div>
+  <div  class="button-wrapper">
+    <app-button></app-button>
+  </div>
+</section>

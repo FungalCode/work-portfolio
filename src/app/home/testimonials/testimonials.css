@@ -1,0 +1,56 @@
+.testimonials-section {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.section-header {
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+app-testimonial-card:nth-child(even) ::ng-deep .card-container {
+  background-color: transparent;
+}
+
+.testimonials-slider {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 var(--outer-padding);
+}
+
+.testimonials-slider::-webkit-scrollbar {
+  display: none;
+}
+
+app-testimonial-card {
+  scroll-snap-align: center;
+}
+
+/* Desktop Layout (ab 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2xX Grid */
+    gap: 2rem;
+    overflow: visible;
+    padding: 0;
+    scroll-snap-type: none;
+  }
+
+  app-testimonial-card {
+    flex: none;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,23 @@
+<svg
+  [attr.width]="size"
+  [attr.height]="size"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  style="display:block; margin:auto;"
+>
+  <!-- background circle -->
+  <circle cx="12" cy="12" r="12" [attr.fill]="fillColor" />
+
+  <!-- check mark -->
+  <path
+    d="M7.5 12.5L10.5 15.5L17 9"
+    [attr.stroke]="color"
+    [attr.stroke-width]="strokeWidth"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- outer stroke -->
+  <circle cx="12" cy="12" r="11" [attr.stroke]="outerStroke" [attr.stroke-width]="strokeWidth" fill="none" />
+</svg>

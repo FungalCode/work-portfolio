@@ -1,0 +1,49 @@
+@switch (getActionType()) {
+  @case ('external') {
+    <a
+      [href]="externalLink()"
+      target="_blank"
+      rel="noopener noreferrer"
+      [class]="'btn btn-' + variant()"
+      (click)="handleClick($event)">
+      <span class="btn-text">{{ text() }}</span>
+      <svg [class]="'btn-arrow-' + variant()" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  }
+  @case ('internal') {
+    <a
+      [routerLink]="internalLink()"
+      [class]="'btn btn-' + variant()"
+      (click)="handleClick($event)">
+      <span class="btn-text">{{ text() }}</span>
+      <svg [class]="'btn-arrow-' + variant()" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+  }
+  @case ('scroll') {
+    <button
+      type="button"
+      [class]="'btn btn-' + variant()"
+      (click)="handleClick($event)">
+      <span class="btn-text">{{ text() }}</span>
+      <svg [class]="'btn-arrow-' + variant()" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  }
+  @default {
+    <button
+      type="button"
+      [class]="'btn btn-' + variant()"
+      (click)="handleClick($event)">
+      <span class="btn-text">{{ text() }}</span>
+      <svg [class]="'btn-arrow-' + variant()" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  }
+}
+

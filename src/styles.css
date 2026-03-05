@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #1A73E8;
+    --secondary-color: #00B24A;
+    --tertiary-color: #FF4C4C;
+    --background-color: #FFFFF0;
+    --background-card-color: #FFFFFA;
+    --text-color: #050505;
+
+    --light-primary-color: #DFE5EE;
+    --light-secondary-color: #F4FFEB;
+    --light-text-color: #151414;
+
+    --outer-padding: 1rem;
+
+    --project-width: 1440px;
+
+    --transition-standard: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('/assets/fonts/Lora-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+section {
+    padding: 4rem var(--outer-padding);
+    max-width: var(--project-width);
+    margin: 0 auto;
+}
+
+.h1 {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 135%;
+    text-align: center;
+}
+
+.h2 {
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    font-weight: 400;
+    font-family: 'Lora', serif;
+    line-height: 140%;
+    text-align: center;
+}
+
+.h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem); 
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.p {
+    font-size: clamp(1.125rem, 1.5vw, 1.25rem);
+    line-height: 150%;
+}

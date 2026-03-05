@@ -1,0 +1,110 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  outline: none;
+  justify-content: center;
+  letter-spacing: 1%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-text {
+  text-align: center;
+}
+
+/* ============================================
+   PRIMARY VARIANT
+   ============================================ */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(25, 59, 209, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SECONDARY VARIANT
+   ============================================ */
+.btn-secondary {
+  display: inline-block;
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all var(--transition-standard);
+  background-color: var(--background-color);
+  font-family: 'Lora', serif;
+}
+
+.btn-secondary:hover {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   ARROW ICON
+   ============================================ */
+.btn-arrow-primary {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.btn-arrow-secondary {
+  display: none;
+}
+
+.btn:hover .btn-arrow,
+.btn:focus .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+
+  .btn:hover .btn-arrow,
+  .btn:focus .btn-arrow {
+    transform: none;
+  }
+}

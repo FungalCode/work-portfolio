@@ -1,0 +1,38 @@
+.pricing-section {
+  background-color: var(--background-color);
+  max-width: var(--project-width);
+  margin: 0 auto;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.button-wrapper {
+  width: 100%;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* Desktop Layout (Standard Tablet/Desktop Breakpoint) */
+@media (min-width: 860px) {
+  .pricing-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing-section {
+    padding: 6rem 1rem;
+  }
+}

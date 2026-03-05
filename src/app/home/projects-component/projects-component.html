@@ -1,0 +1,9 @@
+<section id="projects" class="container">
+      <h2 class="h2 section-title">Webdesign aus Salzburg.</h2>
+      
+      <div class="projects-stack">
+        @for (item of projects(); track item.title) {
+          <app-project-card-component [project]="item" />
+        }
+      </div>
+    </section>

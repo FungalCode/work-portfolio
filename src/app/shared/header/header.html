@@ -1,0 +1,39 @@
+<header class="navbar" [class.hidden]="!isNavbarVisible()">
+  <div class="navbar-wrapper">
+
+    <nav class="navbar-nav-desktop">
+    <span class="h2 logo">Samuel Lackner</span>
+    <div class="nav-items">
+      @for (item of navItems; track item.path) {
+        <a (click)="scrollToSection(item.path)"
+            class="nav-link">
+        {{ item.label }}
+        </a>
+      }
+    </div>
+    </nav>
+
+    <div class="navbar-mobile">
+      <span class="h2 logo">Samuel Lackner</span>
+      <button 
+        class="burger-menu" 
+        [class.open]="isMenuOpen()"
+        (click)="toggleMenu()"
+        aria-label="Toggle navigation menu"
+        [attr.aria-expanded]="isMenuOpen()">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+
+    <nav class="navbar-nav-mobile" [class.open]="isMenuOpen()">
+      @for (item of navItems; track item.path) {
+        <a (click)="scrollToSection(item.path)" 
+            class="nav-link">
+        {{ item.label }}
+        </a>
+      }
+    </nav>
+  </div>
+</header>
