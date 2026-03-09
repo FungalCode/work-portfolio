@@ -6,10 +6,11 @@ import { Pricing } from "../pricing/pricing";
 import { ProjectsComponent } from "../projects-component/projects-component";
 import { AnalysisBanner } from "../analysis-banner/analysis-banner";
 import { AboutMeComponent } from '../about-me-component/about-me-component';
+import {LogoCarousel} from '../logo-carousel/logo-carousel';
 
 @Component({
   selector: 'app-homepage',
-  imports: [Hero, Testimonials, Process, Pricing, ProjectsComponent, AnalysisBanner, AboutMeComponent],
+  imports: [Hero, Testimonials, Process, Pricing, ProjectsComponent, AnalysisBanner, AboutMeComponent, LogoCarousel],
   templateUrl: './homepage.html',
   styleUrl: './homepage.css',
 })

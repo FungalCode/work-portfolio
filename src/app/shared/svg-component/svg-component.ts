@@ -1,0 +1,36 @@
+import {Component, computed, inject, input} from '@angular/core';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+
+export type IconName = 'paper' | 'bolt';
+
+@Component({
+  selector: 'app-svg-component',
+  imports: [],
+  templateUrl: './svg-component.html',
+  styleUrl: './svg-component.css',
+})
+export class SvgComponent {
+  private sanitizer = inject(DomSanitizer);
+
+  // Signal input for the icon name
+  name = input.required<IconName>();
+
+  // Library of SVGs stored as strings
+  private readonly ICONS: Record<IconName, string> = {
+    bolt: `<svg width="27" height="33" viewBox="0 0 27 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <path fill-rule="evenodd" clip-rule="evenodd" d="M19.688 1.25L1.25 18.6323H11.6444L6.01935 30.8198L25.1822 13.9448H14.4569L19.688 1.25Z" stroke="#2C6EC4" stroke-width="2.5" stroke-linejoin="round"/>
+           </svg>
+           `,
+    paper: `<svg width="27" height="29" viewBox="0 0 27 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.8181 19.2147H18.3202M9.54304 1.25L4.53215 6.26089L9.54304 1.25ZM1.25 2.89108L4.53215 6.26089L1.25 2.89108ZM10.8181 9.8371H18.3202H10.8181ZM10.8181 14.5259H18.3202H10.8181Z" stroke="#1F5EB2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.4536 1.39795L23.0091 1.39795C24.0449 1.39795 24.8846 2.23765 24.8846 3.27347V25.7797C24.8846 26.8155 24.0449 27.6552 23.0091 27.6552H6.12942C5.0936 27.6552 4.25391 26.8155 4.25391 25.7797L4.25391 11.5752" stroke="#2C6EC4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            `,
+  };
+
+  // Computed signal to sanitize the HTML whenever the name changes
+  protected safeSvg = computed<SafeHtml>(() => {
+    const svgString = this.ICONS[this.name()] || '';
+    return this.sanitizer.bypassSecurityTrustHtml(svgString);
+  });
+}

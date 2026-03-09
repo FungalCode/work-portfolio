@@ -1,9 +1,16 @@
 <section>
     <h2 class="h2">Mehr qualifizierte Patienten für Deine Praxis.<span class="montserrat-h2"> Mein Prozess.</span></h2>
-    @for (step of steps(); track step.title) {
+    @for (step of steps(); track step.title; let i = $index) {
         <div class="step">
-            <h3 class="h3">{{ step.title }}</h3>
-            <p class="p">{{ step.description }}</p>
+            <div class="title-wrapper">
+              <h3 class="h3">{{ step.title }}</h3>
+              @if (i == 0) {
+                <app-svg-component name="paper" class="paper"></app-svg-component>
+              } @else if (i == 3) {
+                <app-svg-component name="bolt" class="bolt"></app-svg-component>
+              }
+            </div>
+            <p class="p" [innerHTML]="step.description"></p>
         </div>
     }
 </section>

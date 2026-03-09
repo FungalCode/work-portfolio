@@ -1,0 +1,43 @@
+.carousel-container {
+  max-width: var(--project-width);
+  overflow: hidden;
+  padding: 1rem 0;
+  background: transparent;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 5rem;
+}
+
+.logo-item {
+  filter: grayscale(1) brightness(.8);
+  opacity: 1;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
