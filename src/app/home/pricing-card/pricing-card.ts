@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
 import { CheckmarkComponent } from '../../shared/checkmark/checkmark.component';
 
 @Component({
@@ -18,4 +18,5 @@ export class PricingCard {
   price = input.required<string>();
   highlightedFeatures = input<string[]>([]);
   standardFeatures = input<string[]>([]);
+  monthlyTag = input<boolean>(false);
 }

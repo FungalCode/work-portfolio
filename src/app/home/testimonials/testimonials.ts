@@ -5,7 +5,7 @@ interface TestimonialData {
   quote: string;
   name: string;
   title: string;
-  image: string;
+  image: string | null;
 }
 
 @Component({
@@ -28,6 +28,18 @@ export class Testimonials {
       name: 'Nicole Berger',
       title: 'Beraterin',
       image: '/assets/images/testimonials/nicole.webp'
+    },
+    {
+      quote:'„Samuel hat meine Wünsche rasch und unkompliziert perfekt umgesetzt und sich zeitnah um meine Anfragen gekümmert. Kann ich nur empfehlen!”',
+      name: 'Evelyn-Dechant Tucheslau',
+      title:'Supervisorin',
+      image: '/assets/images/testimonials/evelyn.webp'
+    },
+    {
+      quote:'„Samuel hat unsere WordPress Homepage programmiert und diese mit viel Liebe und Umsicht gestaltet. Die Zusammenarbeit war einfach und er hat immer schnell reagiert oder für Probleme Lösungen gefunden.”',
+      name: 'Esra W.',
+      title: 'Goldschmied',
+      image: '/assets/images/testimonials/anonymous.svg'
     }
   ]);
 }

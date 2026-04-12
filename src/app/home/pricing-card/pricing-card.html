@@ -8,6 +8,9 @@
   </header>
 
   <div class="features-wrapper">
+    @if (monthlyTag()) {
+      <span class="tag">monatlich</span>
+    }
     @if (highlightedFeatures().length > 0) {
       <ul class="feature-list highlighted" aria-label="Premium Features">
         @for (feature of highlightedFeatures(); track feature) {
@@ -33,13 +36,13 @@
 </div>
 
 <ng-template #checkmark>
-  <svg 
-    class="check-icon" 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    stroke-width="2.5" 
-    stroke-linecap="round" 
+  <svg
+    class="check-icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.5"
+    stroke-linecap="round"
     stroke-linejoin="round"
     aria-hidden="true">
     <polyline points="20 6 9 17 4 12"></polyline>

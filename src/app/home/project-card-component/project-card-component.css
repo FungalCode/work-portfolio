@@ -19,7 +19,7 @@
 }
 
 :host-context(section):not(:first-child) .card {
-  transform: scale(1.02); 
+  transform: scale(1.02);
 }
 
 .card-content {
@@ -38,7 +38,7 @@
 .bullet-list {
   list-style: none;
   padding: 0;
-  margin: 0;  
+  margin: 0;
 }
 
 .bullet-list li {
@@ -113,7 +113,7 @@
 
 @media screen and (width < 550px) {
   :host {
-    top: 6rem;
+    top: 4rem;
   }
   .card {
     padding: 1em;

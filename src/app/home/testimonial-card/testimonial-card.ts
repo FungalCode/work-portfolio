@@ -17,5 +17,5 @@ export class TestimonialCard {
   quote = input.required<string>();
   authorName = input.required<string>();
   authorTitle = input.required<string>();
-  authorImage = input.required<string>();
+  authorImage = input<string>();
 }

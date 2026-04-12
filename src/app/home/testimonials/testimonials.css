@@ -9,7 +9,7 @@
 }
 
 app-testimonial-card:nth-child(even) ::ng-deep .card-container {
-  background-color: transparent;
+  background: transparent;
 }
 
 .testimonials-slider {
@@ -32,17 +32,25 @@ app-testimonial-card {
   scroll-snap-align: center;
 }
 
-/* Desktop Layout (ab 1024px) */
-@media (min-width: 1024px) {
+
+@media screen and (width >= 1096px) {
+  app-testimonial-card:nth-child(even) ::ng-deep .card-container {
+    background: var(--background-card-color);
+  }
+
+  app-testimonial-card:nth-child(even) ::ng-deep .card-container:hover {
+    background: transparent;
+  }
+
   .container {
-    max-width: 1200px;
+    max-width: var(--project-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 var(--outer-padding);
   }
 
   .testimonials-slider {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2xX Grid */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     overflow: visible;
     padding: 0;

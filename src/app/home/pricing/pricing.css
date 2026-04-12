@@ -20,10 +20,9 @@
   margin-top: 2.5rem;
   display: flex;
   justify-content: center;
-  
+
 }
 
-/* Desktop Layout (Standard Tablet/Desktop Breakpoint) */
 @media (min-width: 860px) {
   .pricing-grid {
     flex-direction: row;
@@ -35,4 +34,26 @@
   .pricing-section {
     padding: 6rem 1rem;
   }
+}
+
+app-pricing-card {
+  position: relative;
+}
+
+app-pricing-card:first-of-type::before {
+  content: 'auch als Relaunch';
+  position: absolute;
+  font-size: 1rem;
+  color: var(--white);
+  text-align: center;
+  border-radius: 1em;
+  letter-spacing: -1%;
+
+  background-color: var(--tertiary-color);
+  top:0;
+  left: 0;
+  transform: rotate(-15deg) translate(-25%, -25%);
+  transform-origin: center center;
+  max-width: 120px;
+  padding: .5rem;
 }

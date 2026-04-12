@@ -10,12 +10,12 @@ import { NgOptimizedImage } from '@angular/common';
 })
 export class LogoCarousel {
   logos = signal<string[]>([
-    '/assets/logos/jew-friends.png',
-    '/assets/logos/reboot.png',
+    '/assets/logos/jew-friends.webp',
+    '/assets/logos/reboot.webp',
     '/assets/logos/kraiwiesen.svg',
     '/assets/logos/tucheslau.avif',
     '/assets/logos/isabella.svg',
-    '/assets/logos/eg.svg',
+    '/assets/logos/oefs.webp',
     '/assets/logos/nicole.webp',
   ]);
 }

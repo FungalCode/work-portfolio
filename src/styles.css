@@ -5,6 +5,7 @@
     --background-color: #FFFFF0;
     --background-card-color: #FFFFFA;
     --text-color: #050505;
+    --white: #F7F7F7;
 
     --light-primary-color: #DFE5EE;
     --light-secondary-color: #F4FFEB;
@@ -12,7 +13,7 @@
 
     --outer-padding: 1rem;
 
-    --project-width: 1440px;
+    --project-width: 1152px;
 
     --transition-standard: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -47,10 +48,11 @@ section {
 }
 
 .h1 {
-    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
     font-weight: 600;
     line-height: 135%;
     text-align: center;
+
 }
 
 .h2 {
@@ -62,7 +64,7 @@ section {
 }
 
 .h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem); 
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 600;
     line-height: 140%;
 }
@@ -70,4 +72,10 @@ section {
 .p {
     font-size: clamp(1.125rem, 1.5vw, 1.25rem);
     line-height: 150%;
+}
+
+@media screen and (width >= 1152px) {
+  :root {
+    --outer-padding: 0rem;
+  }
 }

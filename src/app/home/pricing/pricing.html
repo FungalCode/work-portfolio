@@ -3,12 +3,13 @@
     <h2 id="pricing-title" class="h2">Kosten. Exklusive Ust.</h2>
   </header>
   <div class="pricing-grid">
-    @for (plan of plans(); track plan.title) {
+    @for (plan of plans(); track plan.title; let i = $index) {
       <app-pricing-card
         [title]="plan.title"
         [price]="plan.price"
         [highlightedFeatures]="plan.highlighted"
         [standardFeatures]="plan.standard"
+        [monthlyTag]="i == 1"
       />
     }
   </div>

@@ -11,13 +11,13 @@ export class ProjectsComponent {
   projects = signal<Project[]>([
       {
         title: 'Jennifer Daniel',
-        description: 'Bereits im ersten Quartal nach dem Launch erzielte die Website der Physio&shy;therapeutin Jennifer Daniel über 3.000 Seitenaufrufe von mehr als 200 potenziellen Patienten. <br><br> Dank einer klaren Navigation und Kommunikation gelangen die viele Besucher schnell zur Termin&shy;buchungs&shy;seite, die als wichtigste Conversion-Seite dient.',
+        description: 'Bereits im ersten Quartal nach dem Launch erzielte die Website der Physio&shy;therapeutin Jennifer Daniel über 3.000 Seitenaufrufe von mehr als 200 potenziellen Patienten. <p class="desktop-only"> <br> Dank einer klaren Navigation und Kommunikation gelangen die viele Besucher schnell zur Termin&shy;buchungs&shy;seite, die als wichtigste Conversion-Seite dient. </p>',
         images: ['/assets/images/jennifer-daniel/jennifer1.webp', '/assets/images/jennifer-daniel/jennifer2.webp', '/assets/images/jennifer-daniel/jennifer3.webp', '/assets/images/jennifer-daniel/jennifer4.webp'],
         websiteUrl: 'https://www.sport-dj-physio.at/'
       },
       {
         title: 'Isabella Zeitz',
-        description: 'Dank einer gezielten Werbekampagne, die eine neue Webseite und stimmische Flyer enthielt, konnte die Musikpädagogin Isabella Zeitz neue Schülerinnen und Schüler finden.',
+        description: 'Durch eine gezielte Werbe&shy;kampagne mit neuer Website und ansprechenden Flyern konnte die Musik&shy;pädagogin Isabella Zeitz erfolgreich neue Schülerinnen und Schüler gewinnen.',
         images: ['/assets/images/isabella-zeitz/isabella1.webp', '/assets/images/isabella-zeitz/isabella2.webp', '/assets/images/isabella-zeitz/isabella3.webp', '/assets/images/isabella-zeitz/isabella4.webp', '/assets/images/isabella-zeitz/isabella5.webp'],
         websiteUrl: 'https://isabella-zeitz.at/'
       },
